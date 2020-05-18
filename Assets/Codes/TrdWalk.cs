@@ -151,6 +151,14 @@ public class TrdWalk : MonoBehaviour
 		//equivalente ao Start 
 		state = States.jump;
 		jumptime = 0.5f;
+
+		if(Physics.Raycast(transform.position+Vector3.up*.5f,Vector3.down,out RaycastHit hit, 65279))
+		{
+			if (hit.distance > 0.6f)
+			{
+				StartCoroutine(Idle());
+			}
+		}
 		//
 		while (state == States.jump)
 		{
