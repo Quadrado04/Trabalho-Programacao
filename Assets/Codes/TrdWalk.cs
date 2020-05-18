@@ -16,8 +16,10 @@ public class TrdWalk : MonoBehaviour
     public States state;
     public Animator anim;
     public Rigidbody rdb;
+	public float jumpforce = 1000;
+	float jumptime = .5f;
 
-    public Vector3 move { get; private set; }
+	public Vector3 move { get; private set; }
     public float movforce=100;
 
     Vector3 direction;

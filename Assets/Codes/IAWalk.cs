@@ -72,7 +72,7 @@ public class IAWalk : MonoBehaviour
             patrolposition = new Vector3(transform.position.x + Random.Range(-10, 10), transform.position.y, transform.position.z + Random.Range(-10, 10));
         }
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 10)
+        if (Vector3.Distance(transform.position, target.transform.position) < 3)
         {
             currentState = IaState.Berserk;
         }
