@@ -51,8 +51,11 @@ public class TrdWalk : MonoBehaviour
        
         //reduz a força de movimento de acordo com a velocidade pra ter muita força de saida mas pouca velocidade. 
         rdb.AddForce(move * (movforce/(rdb.velocity.magnitude+1)));
-		Vector3 velocityWoY = new Vector3(rdb.velocity.x, 0, rdb.velocity.z);
-		rdb.AddForce(-velocityWoY * 500);
+
+		rdb.AddForce(-rdb.velocity.x * 250, rdb.velocity.y * 2, -rdb.velocity.z * 250);
+
+		//Vector3 velocityWoY = new Vector3(rdb.velocity.x, 0, rdb.velocity.z);
+		//rdb.AddForce(-velocityWoY * 500);
 
 
 		if (Physics.Raycast(transform.position + Vector3.up * .5f, Vector3.down, out RaycastHit hit, 65279))
