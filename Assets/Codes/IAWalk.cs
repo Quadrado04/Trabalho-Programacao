@@ -97,6 +97,7 @@ public class IAWalk : MonoBehaviour
         {
             currentState = IaState.Attack;
         }
+		
     }
 
     void Attack()
@@ -106,6 +107,7 @@ public class IAWalk : MonoBehaviour
         if (Vector3.Distance(transform.position, target.transform.position) > 5)
         {
             currentState = IaState.Berserk;
+
         }
     }
     void Damage()
