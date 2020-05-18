@@ -7,7 +7,6 @@ public class DamageControl : MonoBehaviour
 {
     public int lifes = 3;
     public IAWalk iawalk;
-	public SkinnedMeshRenderer render;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +19,10 @@ public class DamageControl : MonoBehaviour
         
     }
 
-    public void Damage()
+    public void GetDamage()
     {
         iawalk.currentState = IAWalk.IaState.Dying;
-		StartCoroutine(Blink());
+       
 
     }
 
@@ -40,15 +39,6 @@ public class DamageControl : MonoBehaviour
           
         }
     }
-	IEnumerator Blink()
-	{
-		int blinks = 6;
-		while (blinks > 0)
-		{
-			render.enabled = !render.enabled;
-			yield return new WaitForSeconds(0.1f);
-			blinks--;
-		}
-	}
 
+    
 }
