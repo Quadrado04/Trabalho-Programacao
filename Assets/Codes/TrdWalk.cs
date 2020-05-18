@@ -49,16 +49,31 @@ public class TrdWalk : MonoBehaviour
        
         //reduz a força de movimento de acordo com a velocidade pra ter muita força de saida mas pouca velocidade. 
         rdb.AddForce(move * (movforce/(rdb.velocity.magnitude+1)));
+		Vector3 velocityWoY = new Vector3(rdb.velocity.x, 0, rdb.velocity.z);
+		rdb.AddForce(-velocityWoY * 500);
 
-       
-    }
+
+		if (Physics.Raycast(transform.position + Vector3.up * .5f, Vector3.down, out RaycastHit hit, 65279))
+		{
+			anim.SetFloat("GroundDistance", hit.distance);
+		}
+
+	}
     private void Update()
     {
         if(Input.GetButtonDown("Fire1"))
         {
             StartCoroutine(Attack());
         }
-    }
+		if (Input.GetButtonDown("Jump"))
+		{
+			StartCoroutine(Jump());
+		}
+		if (Input.GetButtonUp("Jump"))
+		{
+			jumptime = 0;
+		}
+	}
 
     IEnumerator Idle()
     {
@@ -127,5 +142,25 @@ public class TrdWalk : MonoBehaviour
 	public void Damage()
 	{
 		StartCoroutine(Hit());
+	}
+
+	IEnumerator Jump()
+	{
+		//equivalente ao Start 
+		state = States.jump;
+		jumptime = 0.5f;
+		//
+		while (state == States.jump)
+		{
+			//equivalente ao update
+			rdb.AddForce(Vector3.up * jumpforce * jumptime);
+			jumptime -= Time.fixedDeltaTime;
+			if (jumptime < 0)
+			{
+				StartCoroutine(Idle());
+			}
+			yield return new WaitForFixedUpdate();
+		}
+		//saida do estado
 	}
 }
