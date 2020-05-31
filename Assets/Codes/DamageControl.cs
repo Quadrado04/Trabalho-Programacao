@@ -22,7 +22,12 @@ public class DamageControl : MonoBehaviour
 
     public void Damage()
     {
-        iawalk.currentState = IAWalk.IaState.Dying;
+        iawalk.currentState = IAWalk.IaState.Damage;
+		lifes--;
+		if (lifes <= 0)
+		{
+			iawalk.currentState = IAWalk.IaState.Dying;
+		}
 		StartCoroutine(Blink());
 
     }

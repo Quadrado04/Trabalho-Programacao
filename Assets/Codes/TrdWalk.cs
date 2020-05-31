@@ -18,6 +18,8 @@ public class TrdWalk : MonoBehaviour
     public Rigidbody rdb;
 	public float jumpforce = 1000;
 	float jumptime = .5f;
+	public int lifes = 5;
+	public bool hitted = false;
 
 	public Vector3 move { get; private set; }
     public float movforce=100;
@@ -52,10 +54,10 @@ public class TrdWalk : MonoBehaviour
         //reduz a força de movimento de acordo com a velocidade pra ter muita força de saida mas pouca velocidade. 
         rdb.AddForce(move * (movforce/(rdb.velocity.magnitude+1)));
 
-		rdb.AddForce(-rdb.velocity.x * 250, rdb.velocity.y * 2, -rdb.velocity.z * 250);
+		//rdb.AddForce(-rdb.velocity.x * 250, rdb.velocity.y * 2, -rdb.velocity.z * 250);
 
-		//Vector3 velocityWoY = new Vector3(rdb.velocity.x, 0, rdb.velocity.z);
-		//rdb.AddForce(-velocityWoY * 500);
+		Vector3 velocityWoY = new Vector3(rdb.velocity.x, 0, rdb.velocity.z);
+		rdb.AddForce(-velocityWoY * 500);
 
 
 		if (Physics.Raycast(transform.position + Vector3.up * .5f, Vector3.down, out RaycastHit hit, 65279))
@@ -139,14 +141,36 @@ public class TrdWalk : MonoBehaviour
 		//equivalente ao Start 
 		state = States.Hit;
 		anim.SetTrigger("Hit");
+		lifes--;
+		if (lifes <= 0)
+		{
+			yield return new WaitForEndOfFrame();
+			StartCoroutine(Die());
 
-		yield return new WaitForSeconds(.5f);
-
-		StartCoroutine(Idle());	
+		}
+		else
+		{
+			yield return new WaitForEndOfFrame();
+			StartCoroutine(Idle());
+		}
 	}
 	public void Damage()
 	{
-		StartCoroutine(Hit());
+		if(hitted==false)
+		{
+			Debug.Log("aspas");
+			hitted = true;
+			StartCoroutine(HitTime());
+
+			StartCoroutine(Hit());
+
+		}
+
+	}
+	IEnumerator HitTime()
+	{
+		yield return new WaitForSeconds(1f);
+		hitted = false;
 	}
 
 	IEnumerator Jump()
@@ -175,5 +199,17 @@ public class TrdWalk : MonoBehaviour
 			yield return new WaitForFixedUpdate();
 		}
 		//saida do estado
+	}
+	IEnumerator Die()
+	{
+		//equivalente ao Start 
+		state = States.die;
+		anim.SetBool("Die", true);
+
+		yield return new WaitForSeconds(.5f);
+
+		GetComponent<Rigidbody>().isKinematic = true;
+		this.enabled = false;
+
 	}
 }

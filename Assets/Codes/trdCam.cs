@@ -15,7 +15,10 @@ public class trdCam : MonoBehaviour
     void Awake()
     {
         fakeObject = new GameObject();
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
     }
+
 
     public GameObject GetRefereceObject()
     {
