@@ -10965,10 +10965,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -17021,6 +17021,10 @@ PrefabInstance:
       propertyPath: inimigos
       value: 
       objectReference: {fileID: 1222858604}
+    - target: {fileID: 996520635, guid: 052ccbd9375e2cf4eb3d4c2d82e08191, type: 3}
+      propertyPath: lifes
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 996520639, guid: 052ccbd9375e2cf4eb3d4c2d82e08191, type: 3}
       propertyPath: anim
       value: 
