@@ -8,6 +8,7 @@ public class trdCam : MonoBehaviour
     public Vector3 ajust;
     public Vector3 ajustlook;
     GameObject fakeObject;
+	
 
 
     float zajust=-3;
@@ -56,6 +57,7 @@ public class trdCam : MonoBehaviour
 
         //aplicacao da rotaçao pelo mouse na camera
         fakeObject.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0));
-       
+
+		
     }
 }

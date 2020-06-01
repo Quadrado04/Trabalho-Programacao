@@ -20,6 +20,10 @@ public class TrdWalk : MonoBehaviour
 	float jumptime = .5f;
 	public int lifes = 5;
 	public bool hitted = false;
+	public GameObject panel;
+	public GameObject ButtonManager;
+	public GameObject inimigos;
+	public float time = 5;
 
 	public Vector3 move { get; private set; }
     public float movforce=100;
@@ -35,9 +39,10 @@ public class TrdWalk : MonoBehaviour
 
         referenceObject=Camera.main.GetComponent<trdCam>().GetRefereceObject();
     }
+	
 
-    // Update is called once per frame
-    void FixedUpdate()
+	// Update is called once per frame
+	void FixedUpdate()
     {
         //criacao de vetor de movimento local
         move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -158,7 +163,6 @@ public class TrdWalk : MonoBehaviour
 	{
 		if(hitted==false)
 		{
-			Debug.Log("aspas");
 			hitted = true;
 			StartCoroutine(HitTime());
 
@@ -206,10 +210,20 @@ public class TrdWalk : MonoBehaviour
 		state = States.die;
 		anim.SetBool("Die", true);
 
-		yield return new WaitForSeconds(.5f);
+		yield return new WaitForSeconds(0.5f);
 
+		StartCoroutine(Timer());
 		GetComponent<Rigidbody>().isKinematic = true;
 		this.enabled = false;
-
 	}
+	IEnumerator Timer()
+	{
+		yield return new WaitForSeconds(2.5f);
+		panel.SetActive(true);
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+	}
+	
+
+
 }

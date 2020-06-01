@@ -694,6 +694,7 @@ GameObject:
   - component: {fileID: 4425874778054070}
   - component: {fileID: 33951392306368954}
   - component: {fileID: 23452070650498710}
+  - component: {fileID: 3477451394367682268}
   m_Layer: 0
   m_Name: Mesh4
   m_TagString: Untagged
@@ -761,6 +762,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3477451394367682268
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413736043134648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300006, guid: fba2d10f26522a044a8cdeddfd2a60ae, type: 3}
 --- !u!1 &1441227168646350
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +931,7 @@ GameObject:
   - component: {fileID: 4973013440826478}
   - component: {fileID: 33359703523339574}
   - component: {fileID: 23623109302162522}
+  - component: {fileID: 7724332014590427814}
   m_Layer: 0
   m_Name: Mesh12
   m_TagString: Untagged
@@ -983,6 +999,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7724332014590427814
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637029670472376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300022, guid: fba2d10f26522a044a8cdeddfd2a60ae, type: 3}
 --- !u!1 &1660750007048114
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1024,7 @@ GameObject:
   - component: {fileID: 4094092671939888}
   - component: {fileID: 33042280608968388}
   - component: {fileID: 23673003671828444}
+  - component: {fileID: 8702343106505179934}
   m_Layer: 0
   m_Name: Mesh7
   m_TagString: Untagged
@@ -1061,6 +1092,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8702343106505179934
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660750007048114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300012, guid: fba2d10f26522a044a8cdeddfd2a60ae, type: 3}
 --- !u!1 &1692014923018672
 GameObject:
   m_ObjectHideFlags: 0

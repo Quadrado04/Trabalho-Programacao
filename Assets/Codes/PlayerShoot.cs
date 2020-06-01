@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject[] projectilesPrefab;
     int indexWeapon;
     public GameObject laserpoint;
+	public Animator anim;
     void Update()
     {
         //inputs de teclado
@@ -17,15 +18,23 @@ public class PlayerShoot : MonoBehaviour
 		//se aperta tiro instancia o prefab
 		if (Input.GetKeyDown(KeyCode.Q)) 
 		{
-			Debug.Log("asda");
 			//instancia o objeto e guarda a referencia
+			anim.SetTrigger("Skill");
+			StartCoroutine(Timer());		
+		}
+		IEnumerator Timer()
+		{
+			yield return new WaitForSeconds(0.5f);
+			Vector3 tempPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 			GameObject myprojectile =
-			Instantiate(projectilesPrefab[indexWeapon], transform.position + transform.forward,
+			Instantiate(projectilesPrefab[indexWeapon], tempPos + transform.forward,
 			transform.rotation);
+			myprojectile.GetComponent<Rigidbody>().AddForce(transform.forward * 10, ForceMode.Impulse);
 
 		}
-        
-    }
+
+
+	}
 
 
    

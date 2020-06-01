@@ -6,7 +6,9 @@ public class IAController : MonoBehaviour
 {
     public int iaCount;
     public List<GameObject> ias;
-    public bool over { get; private set; }
+	public GameObject panel;
+	public GameObject ButtonManager;
+	public bool over { get; private set; }
     public int inimigos { get; private set; }
 
     private void Awake()
@@ -58,5 +60,16 @@ public class IAController : MonoBehaviour
 
     private void Victory()
     {
-    }
+		Time.timeScale = 1.0f;
+		GameObject.FindGameObjectWithTag("Player").GetComponent<TrdWalk>().enabled = false;
+		//ButtonManager.SetActive(true);
+		StartCoroutine(Timer());
+	}
+	IEnumerator Timer()
+	{
+		yield return new WaitForSeconds(3.0f);
+		panel.SetActive(true);
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+	}
 }
