@@ -109,6 +109,8 @@ MonoBehaviour:
   hitted: 0
   panel: {fileID: 0}
   ButtonManager: {fileID: 0}
+  inimigos: {fileID: 0}
+  time: 5
   movforce: 20000
 --- !u!114 &5288039617716315128
 MonoBehaviour:
@@ -141,6 +143,7 @@ MonoBehaviour:
   - {fileID: 3076110161118753512, guid: 110e9c6f8804b504c8d4e875aa6dea94, type: 3}
   - {fileID: 3076110161118753512, guid: e8effd43566d3de48ae171d68fbec4fc, type: 3}
   laserpoint: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0000000036449637, y: 0.805305, z: -0.0060065934}
+  m_LocalPosition: {x: 1.014, y: 1.016, z: -0.0060065934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}

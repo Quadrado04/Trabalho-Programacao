@@ -159,7 +159,7 @@ public class TrdWalk : MonoBehaviour
 			StartCoroutine(Idle());
 		}
 	}
-	public void Damage()
+	public void TakeDamage()
 	{
 		if(hitted==false)
 		{
