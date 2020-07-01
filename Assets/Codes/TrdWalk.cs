@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrdWalk : MonoBehaviour
 {
@@ -38,6 +39,15 @@ public class TrdWalk : MonoBehaviour
         StartCoroutine(Idle());
 
         referenceObject=Camera.main.GetComponent<trdCam>().GetRefereceObject();
+
+		if (SceneManager.GetActiveScene().name == "SampleScene")
+		{
+
+			if (CommonStatus.lastPosition.magnitude > 1)
+			{
+				transform.position = CommonStatus.lastPosition;
+			}
+		}
     }
 	
 
