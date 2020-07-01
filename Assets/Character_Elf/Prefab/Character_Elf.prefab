@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069877376}
-  m_LocalRotation: {x: 0.016440747, y: 0.623886, z: -0.1428961, w: 0.7681645}
-  m_LocalPosition: {x: 0.17839982, y: 0.008566261, z: 0.17823523}
+  m_LocalRotation: {x: 0.0630343, y: 0.050578233, z: -0.14614062, w: 0.98595715}
+  m_LocalPosition: {x: -0.101, y: 0.029, z: 0.078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4036533242356900}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -192.641, y: -60.84601, z: -82.981995}
+  m_LocalEulerAnglesHint: {x: -187.995, y: -175.29, z: -196.533}
 --- !u!1 &1009066429071196
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,10 +200,10 @@ Animator:
   m_GameObject: {fileID: 1067053214699150}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8909e7aa923862f4abbfd053c0f0088e, type: 3}
-  m_Controller: {fileID: 9100000, guid: af712638b8cfdc1489250c4152bc5de2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 40936a710c5f0ee4cb3c05e90aa16948, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -284,8 +284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  anim: {fileID: 0}
-  rdb: {fileID: 0}
+  anim: {fileID: 95663668927121952}
+  rdb: {fileID: 1985997479}
   jumpforce: 5000
   lifes: 8
   hitted: 0
