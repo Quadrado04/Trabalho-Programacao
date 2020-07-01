@@ -11,3 +11,4 @@ public class PhisicalWeapon : MonoBehaviour
         collision.gameObject.SendMessage("Damage", SendMessageOptions.DontRequireReceiver);
     }
 }
+

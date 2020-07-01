@@ -2979,6 +2979,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1094132560}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &222188522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5061166457180286509, guid: 16b0f45b3f96e4246bbe835fcdb60e93,
+    type: 3}
+  m_PrefabInstance: {fileID: 1328542838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &229466811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5805,6 +5811,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 492485494}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &497032409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6532504384674689068, guid: 447d45df610135f40b32f7abb8f24645,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972578780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &500791500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7382,6 +7394,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1985997476, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
+      propertyPath: myobjs.Array.data[0]
+      value: 
+      objectReference: {fileID: 222188522}
+    - target: {fileID: 1985997476, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
+      propertyPath: myobjs.Array.data[1]
+      value: 
+      objectReference: {fileID: 497032409}
     - target: {fileID: 1067053214699150, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_Name
       value: Character_Elf
@@ -11483,6 +11503,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289075313}
   m_CullTransparentMesh: 0
+--- !u!1001 &1309559922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 138.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -59.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939888, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932436017445939903, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: m_Name
+      value: Shrine (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885042290137642561, guid: 5efea2b0de763a54aae9cebe6b26f0f3,
+        type: 3}
+      propertyPath: srnetload
+      value: Shrine2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5efea2b0de763a54aae9cebe6b26f0f3, type: 3}
 --- !u!1001 &1313456768
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -271,6 +271,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponOnHand: {fileID: 0}
   handposition: {fileID: 2069877377}
+  myobjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -927199367670048503, guid: 3596cde65b25e284bb307f18c173747b, type: 3}
 --- !u!114 &6465841954232119499
 MonoBehaviour:
   m_ObjectHideFlags: 0
